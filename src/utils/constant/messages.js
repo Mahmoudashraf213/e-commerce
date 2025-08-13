@@ -28,4 +28,16 @@ export const messages = {
         otpSent: "OTP sent successfully",         
         accountCreated: "Account created successfully please check your mail to verify"
     },
+    clothes: {
+        ...generateMessage('clothes'),
+        alreadyExist: "Clothes item already exists",
+        invalidPrice: "Invalid price value",
+        invalidQuantity: "Invalid quantity value",
+        invalidSize: "Invalid size",
+        failToCreate: "Failed to create clothes item",
+        created: "Clothes item created successfully",
+        invalidCouponDiscount : "Invalid coupon discount value, it should be between 0 and 100",
+        invalidCouponCode: "Invalid coupon code",
+        
+    }
 };
