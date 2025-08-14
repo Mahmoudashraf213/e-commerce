@@ -12,25 +12,32 @@ const generateMessage = (entity) => ({
 });
 
 export const messages = {
-    file: { required: 'file is required' },
     user: {
         ...generateMessage('user'),
         verified: "user verified successfully",
-        invalidCredntiols: "invalid credentials",  // Fixed typo
+        invalidCredentials: "invalid credentials",  
         notVerified: "user not verified",
-        invalidToken: "invalid token",            // Kept from main
+        invalidToken: "invalid token",            
         loginSuccessfully: "login successfully",
         unauthorized: "unauthorized to access this api",
-        invalidPassword: "invalid password",      // Kept from Youssef
+        invalidPassword: "invalid password",     
         passwordUpdated: "password updated successfully",
         invalidOTP: "invalid OTP",
         failToUpdatePassword: "failed to update password",
         noAccountsFound: "no accounts found",
-        otpSent: "OTP sent successfully",         // Kept from main
-        acountCreated: "Acount created successfully plese check your mail to verify"
+        otpSent: "OTP sent successfully",         
+        accountCreated: "Account created successfully please check your mail to verify"
     },
-    lesson: generateMessage('lesson'),
-    question: generateMessage('question'),
-    exam: generateMessage('exam'),
-    admin: generateMessage('admin')
+    clothes: {
+        ...generateMessage('clothes'),
+        alreadyExist: "Clothes item already exists",
+        invalidPrice: "Invalid price value",
+        invalidQuantity: "Invalid quantity value",
+        invalidSize: "Invalid size",
+        failToCreate: "Failed to create clothes item",
+        created: "Clothes item created successfully",
+        invalidCouponDiscount : "Invalid coupon discount value, it should be between 0 and 100",
+        invalidCouponCode: "Invalid coupon code",
+        
+    }
 };

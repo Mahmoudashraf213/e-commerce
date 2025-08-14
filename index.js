@@ -2,7 +2,7 @@ import path from 'path'
 import express from 'express'
 import dotenv from 'dotenv'
 import { dbConnection } from './db/connection.js';
-import { bootStrap } from './src/bootStrap.js';
+import { bootStrap } from './src/bootstrap.js';
 
 const app = express()
 const port = process.env.PORT || 3000;
@@ -15,9 +15,6 @@ app.use(express.json());
 dbConnection()
 // api 
 bootStrap(app, express)
-
-
-
 
 
 
