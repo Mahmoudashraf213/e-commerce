@@ -1,1 +1,1 @@
-export * from "./models/clothes.model.js"
+export * from "./models/products.model.js"

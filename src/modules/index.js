@@ -1,2 +1,2 @@
-import clothesRouter from "./clothes/clothes.router.js";
-export { clothesRouter };
+import productsRouter from "./products/products.router.js";
+export { productsRouter };

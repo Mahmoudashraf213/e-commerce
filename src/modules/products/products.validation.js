@@ -2,8 +2,8 @@ import joi from 'joi';
 import { generalFields } from '../../middleware/vaildation.js';
 
 
-// schema for adding clothes
-export const addClothesVal = joi.object({
+// schema for adding products
+export const addProductsVal = joi.object({
    name: generalFields.name.required(),
    price: generalFields.price.required(),
    quantity: generalFields.quantity.required(),
@@ -14,8 +14,8 @@ export const addClothesVal = joi.object({
    finalPrice: generalFields.finalPrice,
 })
 
-// schema for updating clothes
-export const updateClothesVal = joi.object({
+// schema for updating products
+export const updateProductsVal = joi.object({
     name: generalFields.name.optional(),
     price: generalFields.price.optional(),
     quantity: generalFields.quantity.optional(),
@@ -24,16 +24,16 @@ export const updateClothesVal = joi.object({
     color: generalFields.color.optional(),
     coupon: generalFields.coupon.optional(),
     finalPrice: generalFields.finalPrice.optional(),
-    clothesId: generalFields.objectId.required(),
+    productsId: generalFields.objectId.required(),
 
 })
 
-// schema for getting clothes by id
-export const getClothesByIdVal = joi.object({
-    clothesId: generalFields.objectId.required(),
+// schema for getting products by id
+export const getProductsByIdVal = joi.object({
+    productsId: generalFields.objectId.required(),
 });
 
-// schema for deleting clothes 
-export const deleteClothesByIdVal = joi.object({
-    clothesId: generalFields.objectId.required(),
+// schema for deleting products 
+export const deleteProductsByIdVal = joi.object({
+    productsId: generalFields.objectId.required(),
 });

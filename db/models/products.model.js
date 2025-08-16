@@ -2,7 +2,7 @@ import { model, Schema } from "mongoose";
 import { clothingSizes} from "../../src/utils/constant/enum.js";
 
 // schema
-const clothesSchema = new Schema(
+const productsSchema = new Schema(
   {
     name: {
       type: String,
@@ -12,10 +12,6 @@ const clothesSchema = new Schema(
     price: {
       type: String,
       required: true,
-      trim: true,
-    },
-    finalPrice: {
-      type: String,
       trim: true,
     },
     quantity: {
@@ -36,10 +32,6 @@ const clothesSchema = new Schema(
       secure_url: { type: String, required: true },
       public_id: { type: String, required: true },
     },
-    coupon: {
-      code: { type: String, trim: true }, // Example: "WINTER20"
-      discount: { type: Number, min: 0, max: 100 }, // percentage discount
-    },
     color: {
       type: String, 
       trim: true,
@@ -55,4 +47,4 @@ const clothesSchema = new Schema(
 );
 
 // model
-export const Clothes = model("Clothes", clothesSchema);
+export const products = model("Products", productsSchema);
